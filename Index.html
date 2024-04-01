@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakshya 2023</title>
+<link rel="stylesheet" href="CSS/Navtrial.css">
+<link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="Images/Lakshya-B.png" alt="LAKSHYA Logo" onclick="window.location.href='Index.html';"> <!-- Make the logo clickable to return to home -->
+    </div>
+    <a href="Index.html" class="nav-links" >Home</a>
+    <a href="events.html" class="nav-links" >Events</a>
+    <a href="guest-lectures.html" class="nav-links">Guest Lectures</a>
+    <a href="workshops.html" class="nav-links">Workshops</a>
+    <a href="informals.html" class="nav-links">Informals</a> <!-- The 'active' class to indicate the current page -->
+    <div class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn" class="active">Others</a>
+      <div class="dropdown-content">
+        <a href="schedule.html">Schedule</a>
+        <a href="social-activities.html">Social Activities</a>
+        <a href="BatchofNCC.html">Batch's of NCC</a>
+        <a href="gallery.html">Lakshya Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-small" >
+    <div class="logo">
+      <img src="Images/Lakshya-B.png" alt="LAKSHYA Logo" onclick="window.location.href='Index.html';"> <!-- Make the logo clickable to return to home -->
+    </div>
+    <div class="dropdown1">
+      <a href="javascript:void(0)" class="dropbtn1" class="active">Menu</a>
+      <div class="dropdown-content1">
+        <a href="Index.html" class="nav-links" >Home</a>
+        <a href="events.html" class="nav-links" class="active">Events</a>
+        <a href="guest-lectures.html" class="nav-links">Guest Lectures</a>
+        <a href="workshops.html" class="nav-links">Workshops</a>
+        <a href="informals.html" class="nav-links">Informals</a> <!-- The 'active' class to indicate the current page -->
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Others</a>
+          <div class="dropdown-content">
+            <a href="schedule.html">Schedule</a>
+            <a href="social-activities.html">Social Activities</a>
+            <a href="BatchofNCC.html">Batch's of NCC</a>
+            <a href="gallery.html">Lakshya Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="slideshow-container">
+  <!-- Full-width images with number text -->
+  <div class="mySlides fade">
+    <img src="Images/Topbanner lakshya.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Images/slideshowpic2.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Images/Inaug1.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Images/Crowd1.jpg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <img src="Images/Crowd3.jpg" style="width:100%">
+  </div>
+  
+  
+  <!-- Add other images as needed -->
+</div>
+
+<script>
+ let slideIndex = 0;
+let slides = document.getElementsByClassName("mySlides");
+let slideInterval = setInterval(showSlides, 4000); // Change image every 4 seconds
+
+function showSlides() {
+  let i;
+  slideIndex++;
+  if (slideIndex > slides.length) { 
+    slideIndex = 1;
+  }
+  
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = "0"; // Set all slides to transparent
+  }
+
+  slides[slideIndex-1].style.opacity = "1"; // Fade in the active slide
+}
+
+
+</script>
+
+<div class="content">
+  <div class="sidebar">
+    <!-- Sidebar content -->
+  </div>
+  <div class="main-content">
+    <h2>About Lakshya</h2>
+    <p>Lakshya is the annual Defence and Civil Services Festival of NIT, Tiruchirappalli, driven by the National Cadet Corps (NCC) Cadets of A-Flight NCC, NIT Trichy. It aims to persuade and motivate the youth of the college to join the Defence Forces and Civil Services through a plethora of offered opportunities. Since its humble inception in 2012 as the Social Responsibility Event of Pragyan/ Festember, Lakshya has grown leaps and bounds every year. With its every edition transcending the previous one, Lakshya continues to grow bigger and better. Lakshya offers a wide range of events, workshops, informals accompanied by guest lectures delivered by the veterans of their respective fields. The testament to Lakshya's success lies in the observation that a hot summer weekend in Central Tamil Nadu finds students enthusiastically participating in events and grabbing the chance to grow as a person to discover The Spirit of Being Indian.</p>
+  </div>
+</div>
+
+<div class="footer">
+    <div class="footer-logo">
+        <img src="Images/Lakshya-W.png" alt="Main Footer Logo">
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/lakshya_nitt/" target="_blank">
+        <img src="Images/Insta (1).png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/Lakshya.AFlight/" target="_blank">
+          <img src="Images/Facebook (1).png" alt="Facebook">
+      </a>
+      <a href="https://in.linkedin.com/company/lakshyanitt" target="_blank">
+          <img src="Images/LinkedIn (1).png" alt="LinkedIn">
+      </a>
+      <a href="https://www.youtube.com/@lakshyanittrichy3063" target="_blank">
+          <img src="Images/YouTube.png" alt="Yotube">
+      </a>
+      <a href="Lakshya.nitt@gmail.com" target="_blank">
+          <img src="Images/Mail.png" alt="Email">
+      </a>
+        <!-- Add more links and images as needed -->
+    </div>
+</div>
+
+</body>
+</html>

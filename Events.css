@@ -1,0 +1,237 @@
+
+.banner { 
+    position: relative;
+    min-height: 500px; /* Set a minimum height for your image */
+    overflow: hidden; /* Hide the overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/Eventsfinal.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3.5px); /* Apply the blur */
+    z-index: -1; /* Below the text */
+}
+
+.banner-text {
+    position: relative; /* Above the pseudo-element with blur */
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 8em; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better legibility */
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide the container into two equal columns */
+}
+.box.main, .right-half {
+  display: flex;
+  flex-direction: column; /* This will help us control the alignment if needed */
+  height: 50vw;
+}
+.box.main {
+  margin: 10px;
+  position: relative;
+  width:50vw;
+}
+
+.right-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide the right half into two columns */
+  grid-template-rows: 1fr 1fr; /* Divide the right half into two rows */
+  gap: 10px; /* Optional: space between the grid items */
+  /* Additional styling for the right half grid */
+  margin: 10px;
+  align-content: end;
+}
+
+.box.small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add more styling as needed */
+  margin: 2px;
+  height: 80%;
+  width: 80%;
+  position: relative;
+  left:10%;
+  top:5%;
+}
+
+
+.box.main img, .box1.main img {
+  height: 100%; /* This will make the image cover the whole box */
+  width: 100%; /* This will make the image cover the whole box */
+  object-fit: cover; /* Scale the image to fit within the box */
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box.small img {
+  /* ... existing properties ... */
+  border-radius: 25px; /* Apply the same border-radius to the images */
+  height: 100%; /* This will make the image cover the whole box */
+  width: 100%; /* This will make the image cover the whole box */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  
+}
+
+.box.small .text  {
+  position:absolute;
+  left:0%;
+  top:100%;
+  background: white; /* White background for the text area */
+  color: black; /* Black text color */
+
+}
+
+.box.main .text, .box1.main .text {
+  position: absolute;
+  width: 100%;
+  top: 0; /* Position text at the bottom of the box */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Add some padding */
+  margin: 0; /* Remove default margins */
+  font-size: 20px; /* Adjust the font size for visibility */
+  font-weight: bold; /* Make the text bold */
+  border-top-left-radius: 40px; /* Match the image's bottom-left border-radius */
+  border-top-right-radius: 40px;
+  
+}
+
+/* Initially hide the additional hover text */
+.hover-info {
+  display: none;
+  position: absolute;
+  bottom: 0%; /* Adjust as needed */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%, -50%); /* Align the center */
+  text-align: justify;
+  color: white; /* Choose a color that stands out */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  padding: 10px; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+  width: calc(100% - 20px); /* Adjust width as necessary, considering padding */
+  box-sizing: border-box;
+}
+.heading{
+  text-align: center;
+  font-weight: bold; /* Makes the text bold */
+  font-size: larger;
+  display: block;
+}
+
+.register-btn {
+    clear: both; /* Add this line */
+    display:block;
+    font-weight: bold;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    margin-left: auto; /* Centers the button horizontally */
+    margin-right: auto;
+    border-radius: 5px; 
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    animation: blink 1s infinite;
+}
+
+.register-btn:hover {
+    transform: scale(1.1); /* Enlarge the link */
+    background-color: #fdfdfe;
+    color: rgb(2, 2, 2);
+}
+/* Darken the image and display the additional text on hover */
+.box.main:hover img {
+  /*opacity: 0.7; /* Darken the image */
+  filter: brightness(50%);
+
+}
+
+.box.main:hover .hover-info {
+  display: block; /* Show the additional text on hover */
+}
+
+@media (max-width: 768px) {
+  .box {
+    display:none;
+  }
+  .box1 {
+    grid-template-columns: 1fr; /* Switch to a single-column layout */
+    grid-template-rows: repeat(5, 1fr); /* Five rows */
+  }
+
+  .box.main {
+    width: 100%; /* Full width */
+    /* margin: 0px; */
+    height:90vw;
+  }
+  .banner {
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-text {
+    font-size: 5em;
+    
+  }
+  /* .box.small {
+    /* Adjust if needed to change the height */
+  .hover-info {
+    padding: 0;
+    font-size: small;
+    bottom:-10%; 
+  }
+}
+@media (min-width: 768px) {
+  .box1 {
+    display:none;
+  }}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .box {
+    display:none;
+  }
+  .box1 {
+    grid-template-columns: 1fr; /* Switch to a single-column layout */
+    grid-template-rows: repeat(5, 1fr); /* Five rows */
+    gap: 10px;
+  }
+
+  .box.main {
+    width: 100%; /* Full width */
+    margin: 20px;
+    height:90vw;
+    gap: 10px;
+  }
+.hover-info {
+    padding: 0;
+    font-size: large;
+    bottom: 0;
+  }
+  .banner {
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-text {
+    font-size: 5em;
+    
+  }
+}
+

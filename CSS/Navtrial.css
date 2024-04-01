@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Poppins'; 
+    src: url('Poppins/Poppins-Medium.ttf') format('ttf'),
+         url('path/to/your/font-file.ttf') format('ttf'); 
+    font-weight: normal; 
+    font-style: normal; 
+  }
+  
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #fff; 
+      color: #333; 
+    }
+    .navbar, .navbar-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+  }
+  
+  .navbar a {
+    color: #333; 
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar a:hover, .navbar a.active {
+    background-color: #0056b3; 
+    color: white;
+  }
+  
+  .logo {
+    flex-grow: 0; 
+  }
+  
+  .logo img {
+    height: 60px; 
+    cursor: pointer; 
+  }
+
+ 
+/* Default state of the hamburger icon - hidden */
+.hamburger-icon {
+    display: none; /* Hides the hamburger icon by default */
+    cursor: pointer;
+  }
+  
+  .hamburger-icon img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+  }
+  
+  .dropbtn, .dropbtn1 {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease
+  }
+  
+  .dropdown, .dropdown1 {
+    position: relative;
+    display: inline-block;
+ 
+  }
+  
+
+  .dropdown-content, .dropdown-content1 {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3s ease
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0056b3;
+    color: white;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #0056b3;
+    color: white;
+  }
+
+  .dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3s ease
+  }
+  
+  .dropdown-content1 a:hover {
+    background-color: #0056b3;
+    color: white;
+    }
+  
+  .dropdown1:hover .dropdown-content1 {
+    display: block;
+  }
+
+  .dropdown1:hover .dropbtn1 {
+    background-color: #0056b3;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {display:none;}
+  }
+  @media (min-width: 768px) {
+    .navbar-small {display:none;}
+  }
+
+  .footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .footer-logo img {
+      position: relative;
+      margin: 1vw;
+    height: auto;
+    max-width: 100px;
+  
+  }
+  
+  .footer-links {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+  }
+  
+  .footer-links a {
+    position: relative;
+    display: flex;
+    margin: 0 10px;
+    background-color: #000000; 
+    border: 1px solid #fff;
+    border-radius: 50%; 
+    width: 35px; 
+    height: 35px; 
+    line-height: 40px; 
+    align-items: center;  
+    justify-content: center;
+  }
+  
+  .footer-links a img {
+    height: 25px; 
+    width: 25px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .footer-logo img {max-width: 60px;}
+    .footer-links {gap: 8px;}
+    .footer-links a {
+      width: 22px;
+      height: 22px;
+    }
+    .footer-links a img {
+      width: 17px;
+      height: 17px;
+    }
+  }
+  @media (max-width: 400px) {
+    .footer-logo img {max-width: 30px;}
+    .footer-links {gap: 4px;}
+    .footer-links a {
+      width: 15px;
+      height: 15px;
+    }
+    .footer-links a img {
+      width: 10px;
+      height: 10px;
+    }
+  }

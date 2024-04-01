@@ -1,0 +1,127 @@
+.banner { 
+    position: relative;
+    min-height: 40vw; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/phtotogallery2.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3.5px); 
+    z-index: -1; 
+}
+
+.banner-text {
+    position: relative; 
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 10vw; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+#container {
+  width: 100%;
+  min-height: auto; 
+  position: relative; 
+  padding-bottom: 5vw; 
+}
+.box {
+  display: none; 
+  width: calc(100% - 10vw); 
+  height: 60vw; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 5vw;
+  margin: 5vw auto; 
+  object-fit: contain;
+}
+
+
+#container > .box:first-child {
+  display: block;
+}
+
+
+#nav-dots-container {
+  width: 75%; 
+  margin: 0 auto; 
+}
+
+#nav-dots {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  position: relative;
+  top:0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+
+}
+
+
+.dot {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 10px 7px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {  
+  .banner { 
+    position: relative;
+    max-height: 35vw; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #container {
+    width: 100%;
+    min-height: 30vw; /* Let the height adjust to the content */
+    position: relative;
+    padding-bottom: 5vw; /* Space for the navigation dots */
+  }
+  .box {
+    display: none; /* Hide initially */
+    width: calc(100% - 10vw); /* Adjust width to account for margin */
+    height: 60vw; /* Or set a specific height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 5vw;
+    margin: 5vw auto; /* Center in the container */
+    object-fit: contain;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 10px 3px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}

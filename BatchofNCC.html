@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BatchofNCC</title>
+<link rel="stylesheet" href="CSS/Navtrial.css">
+<link rel="stylesheet" href="CSS/BatchofNCC.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+          <img src="Images/Lakshya-B.png" alt="LAKSHYA Logo" onclick="window.location.href='Index.html';"> <!-- Make the logo clickable to return to home -->
+        </div>
+        <a href="Index.html" class="nav-links" >Home</a>
+        <a href="events.html" class="nav-links" class="active">Events</a>
+        <a href="guest-lectures.html" class="nav-links">Guest Lectures</a>
+        <a href="workshops.html" class="nav-links">Workshops</a>
+        <a href="informals.html" class="nav-links">Informals</a> <!-- The 'active' class to indicate the current page -->
+        <div class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn" class="active">Others</a>
+          <div class="dropdown-content">
+            <a href="schedule.html">Schedule</a>
+            <a href="social-activities.html">Social Activities</a>
+            <a href="BatchofNCC.html">Batch's of NCC</a>
+            <a href="gallery.html">Lakshya Gallery</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="navbar-small" >
+        <div class="logo">
+          <img src="Images/Lakshya-B.png" alt="LAKSHYA Logo" onclick="window.location.href='Index.html';"> <!-- Make the logo clickable to return to home -->
+        </div>
+        <div class="dropdown1">
+          <a href="javascript:void(0)" class="dropbtn1" class="active">Menu</a>
+          <div class="dropdown-content1">
+            <a href="Index.html" class="nav-links" >Home</a>
+            <a href="events.html" class="nav-links" class="active">Events</a>
+            <a href="guest-lectures.html" class="nav-links">Guest Lectures</a>
+            <a href="workshops.html" class="nav-links">Workshops</a>
+            <a href="informals.html" class="nav-links">Informals</a> <!-- The 'active' class to indicate the current page -->
+            <div class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Others</a>
+              <div class="dropdown-content">
+                <a href="schedule.html">Schedule</a>
+                <a href="social-activities.html">Social Activities</a>
+                <a href="BatchofNCC.html">Batch's of NCC</a>
+                <a href="gallery.html">Lakshya Gallery</a>
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="BatchofNCC-container">
+        <h2 class="BatchofNCC-title">Batch's of NCC</h2>
+      </div>
+
+      <div class="grid-container">
+        <div class="image-container"><img src="Images/aat1.jpg" alt="Image 1"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/slideshow5.png" alt="Image 2"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/Aat2.jpg" alt="Image 3"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/slideshow5.png" alt="Image 4"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/slideshowpic3.JPG" alt="Image 5"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/slideshowpic2.jpg" alt="Image 6"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/slideshowpic3.JPG" alt="Image 7"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/Allabouttrust.png" alt="Image 8"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/bca.png" alt="Image 9"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/Crowd1.jpg" alt="Image 10"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/Crowd3.jpg" alt="Image 11"><div class="overlay-text">Your text here</div></div>
+        <div class="image-container"><img src="Images/Crowd2.JPG" alt="Image 12"><div class="overlay-text">Your text here</div></div>
+      </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1
+  });
+
+  const images = document.querySelectorAll('.image-container');
+  images.forEach(image => {
+    observer.observe(image);
+  });
+
+  // Trigger a scroll event on load to update the visibility of the images
+  window.dispatchEvent(new Event('scroll'));
+});
+
+</script>
+
+<div class="footer">
+    <div class="footer-logo">
+        <img src="Images/Lakshya-W.png" alt="Main Footer Logo">
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/lakshya_nitt/" target="_blank">
+        <img src="Images/Insta (1).png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/Lakshya.AFlight/" target="_blank">
+          <img src="Images/Facebook (1).png" alt="Facebook">
+      </a>
+      <a href="https://in.linkedin.com/company/lakshyanitt" target="_blank">
+          <img src="Images/LinkedIn (1).png" alt="LinkedIn">
+      </a>
+      <a href="https://www.youtube.com/@lakshyanittrichy3063" target="_blank">
+          <img src="Images/YouTube.png" alt="Yotube">
+      </a>
+      <a href="Lakshya.nitt@gmail.com" target="_blank">
+          <img src="Images/Mail.png" alt="Email">
+      </a>
+    </div>
+</div>
+
+</body>
+</html>

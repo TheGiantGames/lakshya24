@@ -1,0 +1,94 @@
+.content { 
+    display: flex;
+    background-image: url('Images/dummyschedule.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    min-height:1550px;
+    max-width: 100%; 
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 10px; 
+}
+
+
+.box {
+  flex: 0 0 calc(30% - 20px); 
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  width: 200px; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.overlay-text {
+  position: absolute;
+  font-size: 1em;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: rgba(120, 119, 119, 0.5);
+  transition: opacity 0.5s ease;
+}
+
+.hidden-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+}
+
+.box:hover {
+  flex-grow: 1.25; 
+}
+
+.box:hover .hidden-text {
+  opacity: 1; 
+}
+
+.social-activity-container {
+  text-align: center; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+.social-activity-title {
+  display: inline-block;
+  background-color: #ffffff; 
+  padding: 5px 10px; 
+  font-size: 24px; 
+}
+
+@media (max-width: 450px) {
+  .box {
+  flex: 0 0 calc(50% - 20px); 
+  margin: 10px; 
+  position: relative; 
+  cursor: pointer;
+  transition: all 0.5s ease; 
+  overflow: hidden;
+  width: 200px;
+  height: 200px; 
+  background-size: cover; 
+  background-position: center; 
+}
+}

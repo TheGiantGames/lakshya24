@@ -1,0 +1,153 @@
+.banner { 
+    position: relative;
+    min-height: 500px; /* Set a minimum height for your image */
+    overflow: hidden; /* Hide the overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('Images/Guestlecturesfinal.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3.5px); /* Apply the blur */
+    z-index: -1; /* Below the text */
+}
+
+.banner-text {
+    position: relative; /* Above the pseudo-element with blur */
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 6em; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better legibility */
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a two-column layout */
+  gap: 10px; /* Space between boxes */
+  margin: 20px;
+}
+
+.box.main {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 30px;
+  overflow: hidden; /* Ensures the image corners are also rounded */
+  position: relative;
+  height: 50vw;
+  align-items: center;
+}
+
+.box.main img{
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+
+}
+
+
+.box.main .text {
+  position: absolute;
+  width: 100%; /* Make the text span the entire width of the box */
+  top: 0; /* Position text at the bottom of the box */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  margin: 0; /* Remove default margins */
+  font-size: 20px; /* Adjust the font size for visibility */
+  font-weight: bold; /* Make the text bold */
+  border-top-left-radius: 40px; /* Match the image's bottom-left border-radius */
+  border-top-right-radius: 40px;
+  /* border: 2px solid black; */
+}
+
+/* Initially hide the additional hover text */
+.hover-info {
+  display: none;
+  position: absolute;
+  bottom: 0%; /* Adjust as needed */
+  left: 50%; /* Center the text horizontally */
+  transform: translate(-50%); 
+  text-align: justify;
+  color: white; /* Choose a color that stands out */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  padding: 10px; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+  width: calc(100% - 20px); /* Adjust width as necessary, considering padding */
+  box-sizing: border-box;
+  align-items: center;
+}
+.heading{
+  text-align: center;
+  font-weight: bold; /* Makes the text bold */
+  font-size: larger;
+  display: block;
+}
+
+.register-btn {
+    clear: both; /* Add this line */
+    display:block;
+    font-weight: bold;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    margin-left: auto; /* Centers the button horizontally */
+    margin-right: auto;
+    border-radius: 5px; 
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    animation: blink 1s infinite;
+}
+
+.register-btn:hover {
+    transform: scale(1.1); /* Enlarge the link */
+    background-color: #fdfdfe;
+    color: rgb(2, 2, 2);
+}
+/* Darken the image and display the additional text on hover */
+.box.main:hover img {
+  /*opacity: 0.7; /* Darken the image */
+  filter: brightness(50%);
+
+}
+
+.box.main:hover .hover-info {
+  display: block; /* Show the additional text on hover */
+}
+
+@media (max-width: 768px) {
+  .box {
+    grid-template-columns: 1fr; /* Switch to a single-column layout */
+  }
+
+  .box.main {
+    width: 100%; /* Full width */
+    margin: 0px;
+    height:100vw;
+  }
+
+  .banner {
+    min-height: 350px;
+  }
+  /* .box.small {
+    /* Adjust if needed to change the height */
+  .hover-info {
+    padding: 0;
+    font-size: small;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .hover-info {
+    padding: 0;
+    font-size: large;
+  }
+}

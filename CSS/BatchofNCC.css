@@ -1,0 +1,74 @@
+.BatchofNCC-container {
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+  }
+  
+  .BatchofNCC-title {
+    display: inline-block;
+    background-color: #ffffff; 
+    padding: 5px 10px; 
+    font-size: 24px; 
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    grid-template-rows: repeat(6, auto); /* Creates 6 rows with height as per content */
+    gap: 20px; /* Adjust space between grid items */
+    justify-items: center; /* Center align items horizontally */
+    align-items: center; /* Center align items vertically */
+    padding: 20px; /* Space around the grid */
+  }
+
+.image-container {
+  display: flex;
+  width: 100%;
+  height:100%;
+  justify-items: center; /* Center align items horizontally */
+  align-items: center; /* Center align items vertically */
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  /* max-width: 100%; */    
+  height: 80%;
+  object-fit: cover;
+  text-align: center; /* Center the text */
+  align-items: center;
+  justify-items: center;
+
+}
+
+.image-container .overlay-text {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;  /* Cover the entire width of the image-container */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white; /* Text color */
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;  /* Center the text content within the element */
+    align-items: center;
+    justify-items: center;
+    height: 10%;
+  }
+
+/* This class is added via JavaScript when the image is in view */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@media (max-width:768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Switch to a single-column layout */
+    grid-template-rows: repeat(12, 1fr); 
+  }
+}
